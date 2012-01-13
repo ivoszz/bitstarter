@@ -1,0 +1,8 @@
+{
+  "name": "go-brno",
+  "version": "0.1",
+  "dependencies: {
+    "express": "2.5.5",
+    "jade": "0.20.0"
+  }
+}
