@@ -1,0 +1,35 @@
+extends layout
+
+block navigation
+  menu.row
+    ul.nav.pills.pull-right
+      li.active: a(href="#") Home
+      li: a(href="/players") Hráči
+
+block header
+  .page-header
+    h1 Go klub Brno
+    p
+      | Vestibulum id ligula porta felis euismod semper. Integer posuere
+      | erat a ante venenatis dapibus posuere velit aliquet. Duis mollis,
+      | est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+      | odio sem nec elit.
+
+block content
+  .row
+    .span4
+      h2 Specifications
+      p 
+        | Etiam porta sem malesuada magna mollis euismod. Integer posuere
+        | erat a ante venenatis dapibus posuere velit aliquet. Aenean eu
+        | leo quam. Pellentesque ornare sem lacinia quam venenatis
+        | vestibulum. Duis mollis, est non commodo luctus, nisi erat
+        | porttitor ligula, eget lacinia odio sem nec elit
+    .span8
+      h2 Plans and Pricing
+      p
+        | Etiam porta sem malesuada magna mollis euismod. Integer posuere
+        | erat a ante venenatis dapibus posuere velit aliquet. Aenean eu
+        | leo quam. Pellentesque ornare sem lacinia quam venenatis
+        | vestibulum. Duis mollis, est non commodo luctus, nisi erat
+        | porttitor ligula, eget lacinia odio sem nec elit
