@@ -2,6 +2,7 @@
   "name": "go-brno",
   "version": "0.1.0",
   "dependencies": {
-    "express": "2.5.5"
+    "pg": "latest",
+    "express": "latest"
   }
 }
