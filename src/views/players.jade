@@ -2,9 +2,15 @@ extends layout
 
 block navigation
   menu.row
-    ul.nav.pills.pull-right
+    ul.nav.nav-pills.pull-right
       li: a(href="/") Home
       li.active: a(href="#") Hráči
+      li: a(href='#') Položka 3
+      li: a(href='#') Položka 4
+      li: a(href='#') Položka 5
+      li: a(href='#') Položka 6
+      li: a(href='#') Položka 7
+      li: a(href='#') Položka 8
 
 block header
   .page-header
@@ -17,18 +23,57 @@ block header
       | odio sem nec elit.
 
 block content
-  .row
+  section.row
     .span4
-      p
-        h2 Specifications
+      h2 Left column
       p 
-        | Etiam porta sem malesuada magna mollis euismod. Integer posuere
-        | erat a ante venenatis dapibus posuere velit aliquet. Aenean eu
-        | leo quam. Pellentesque ornare sem lacinia quam venenatis
-        | vestibulum. Duis mollis, est non commodo luctus, nisi erat
-        | porttitor ligula, eget lacinia odio sem nec elit
+        | Praesent ac tellus ac magna euismod sollicitudin.
+        | Vivamus et arcu quam, et accumsan lorem. Aliquam id odio
+        | turpis. Vestibulum blandit dictum purus ut varius. Donec
+        | cursus pretium turpis, eget porta erat aliquam vitae.
+      p
+        | Duis vehicula libero id ante faucibus suscipit. Cras auctor,
+        | felis vel auctor faucibus, eros tellus tincidunt lorem,
+        | ac consequat nisi neque nec erat.
+      p
+        | Suspendisse tincidunt
+        | ullamcorper dui at vehicula. Cras molestie sem et justo
+        | tincidunt vehicula. Pellentesque ut dui tortor, vitae
+        | tristique justo. Donec a malesuada diam. Etiam pulvinar
+        | pellentesque iaculis.
     .span8
+      h2 Hráči
       p
-        h2 Players
+        | Phasellus id nibh eros, sed gravida tortor. Morbi in orci
+        | quis massa malesuada aliquam eget ac lorem. Nunc est nulla,
+        | dapibus at consectetur id, faucibus at nisl. Nam tincidunt
+        | tellus ac lacus vehicula ut accumsan tellus lobortis.
+        | Vestibulum ante ipsum primis in faucibus orci luctus et
+        | ultrices posuere cubilia Curae; In quis felis ante, sed
+        | euismod mauris. 
       p
-        table.condensed-table
+        | Vivamus ornare lobortis dolor, nec vehicula
+        | elit interdum vitae. Duis ut arcu ipsum. Praesent lacinia,
+        | est ac cursus bibendum, odio velit faucibus risus, ut mattis
+        | elit sapien non odio. Ut tempus, tortor ac faucibus
+        | scelerisque, enim nunc imperdiet ante, placerat elementum
+        | metus lacus eu orci. Proin rhoncus accumsan sollicitudin.
+        | Aenean a tortor nulla, vitae accumsan lorem. Integer enim
+        | ligula, vehicula sed sodales et, iaculis eget nisl.
+      p
+        | Phasellus id nibh eros, sed gravida tortor. Morbi in orci
+        | quis massa malesuada aliquam eget ac lorem. Nunc est nulla,
+        | dapibus at consectetur id, faucibus at nisl. Nam tincidunt
+        | tellus ac lacus vehicula ut accumsan tellus lobortis.
+        | Vestibulum ante ipsum primis in faucibus orci luctus et
+        | ultrices posuere cubilia Curae; In quis felis ante, sed
+        | euismod mauris. 
+      p
+        | Vivamus ornare lobortis dolor, nec vehicula
+        | elit interdum vitae. Duis ut arcu ipsum. Praesent lacinia,
+        | est ac cursus bibendum, odio velit faucibus risus, ut mattis
+        | elit sapien non odio. Ut tempus, tortor ac faucibus
+        | scelerisque, enim nunc imperdiet ante, placerat elementum
+        | metus lacus eu orci. Proin rhoncus accumsan sollicitudin.
+        | Aenean a tortor nulla, vitae accumsan lorem. Integer enim
+        | ligula, vehicula sed sodales et, iaculis eget nisl.

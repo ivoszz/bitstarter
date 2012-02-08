@@ -9,6 +9,8 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
   console.log(query);
 }); */
 
+var port = process.env.PORT || 4000;
+
 var app = express.createServer();
 
 app.set('views', __dirname + '/views');
@@ -29,8 +31,6 @@ app.get('/', function(request, response) {
 app.get('/players', function(request, response) {
   response.render('players', { pageInfo: pageInfo })
 });
-
-var port = process.env.PORT || 4000;
 
 app.listen(port);
 console.log('Listening on port %d.', port);
