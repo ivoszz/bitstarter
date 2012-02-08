@@ -9,7 +9,7 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
   console.log(query);
 }); */
 
-var app = express.createServer(express.logger());
+var app = express.createServer();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -20,9 +20,7 @@ app.configure(function() {
   app.use(express.static(__dirname + '/public'));
 });
 
-var pageInfo = {
-  pageTitle: 'Go klub Brno'
-};
+var pageInfo = { pageTitle: 'Go klub Brno' };
 
 app.get('/', function(request, response) {
   response.render('index', { pageInfo: pageInfo });

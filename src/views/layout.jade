@@ -6,16 +6,21 @@ html(lang="cs")
     title= pageInfo.pageTitle
     // if lt IE 9
       script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
-    link(href="/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/css/bootstrap.css", rel="stylesheet")
     link(href="/css/style.css", rel="stylesheet")
   body
-    block navbar
     .container
+
       block navigation
+
       block header
+
       block content
+
       block footer
-        #footer
-          p &copy; 2012, ivoszz, #{pageInfo.pageTitle}
+        footer#footer
+          hr
+          p &copy; 2012, #{pageInfo.pageTitle}, webdesign: ivoszz
+
     block scripts
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")

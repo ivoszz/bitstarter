@@ -4,32 +4,116 @@ block navigation
   menu.row
     ul.nav.pills.pull-right
       li.active: a(href="#") Home
-      li: a(href="/players") Hráči
+      li: a(href="#") Položka 2
+      li: a(href='#') Položka 3
+      li: a(href='#') Položka 4
+      li: a(href='#') Položka 5
+      li: a(href='#') Položka 6
+      li: a(href='#') Položka 7
+      li: a(href='#') Položka 8
 
 block header
-  .page-header
-    h1 Go klub Brno
-    p
-      | Vestibulum id ligula porta felis euismod semper. Integer posuere
-      | erat a ante venenatis dapibus posuere velit aliquet. Duis mollis,
-      | est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-      | odio sem nec elit.
+  header
+    // .page-header
+      h1 Go klub Brno
+    blockquote
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        | Proin sit amet nisl diam. Aenean dapibus volutpat nibh.
+        | Ut eros sem, pretium non sagittis eget, convallis vitae nisi.
+        | Phasellus nibh dolor, vulputate nec varius vitae, cursus
+        | vitae purus. In a elit vel felis elementum fringilla.
+    #mycarousel.carousel.slide
+      .carousel-inner
+        .item.active
+          img(src="/images/carousel1.jpg", height="100px", alt="")
+          .carousel-caption
+            h4 Label one caption
+            p
+              | Sed interdum egestas nunc, tempus euismod massa vehicula sed.
+              | Pellentesque vel ligula quis sem aliquam eleifend. Duis at
+              | lectus risus, at interdum ante. Cras faucibus eros non orci
+              | cursus rutrum. Cum sociis natoque penatibus et magnis dis
+              | parturient montes, nascetur ridiculus mus. Vestibulum elit
+        .item
+          img(src="/images/carousel2.jpg", height="100px", alt="")
+          .carousel-caption
+            h4 Label two caption
+            p
+              | Sed interdum egestas nunc, tempus euismod massa vehicula sed.
+              | Pellentesque vel ligula quis sem aliquam eleifend. Duis at
+              | lectus risus, at interdum ante. Cras faucibus eros non orci
+              | cursus rutrum. Cum sociis natoque penatibus et magnis dis
+              | parturient montes, nascetur ridiculus mus. Vestibulum elit
+        .item
+          img(src="/images/carousel3.jpg", height="100px", alt="")
+          .carousel-caption
+            h4 Label three caption
+            p
+              | Sed interdum egestas nunc, tempus euismod massa vehicula sed.
+              | Pellentesque vel ligula quis sem aliquam eleifend. Duis at
+              | lectus risus, at interdum ante. Cras faucibus eros non orci
+              | cursus rutrum. Cum sociis natoque penatibus et magnis dis
+              | parturient montes, nascetur ridiculus mus. Vestibulum elit
+      a.left.carousel-control(href="#mycarousel", data-slide="prev") &lsaquo;
+      a.right.carousel-control(href="#mycarousel", data-slide="next") &rsaquo;
+      hr
 
 block content
-  .row
+  section.row
     .span4
-      h2 Specifications
+      h2 Left column
       p 
-        | Etiam porta sem malesuada magna mollis euismod. Integer posuere
-        | erat a ante venenatis dapibus posuere velit aliquet. Aenean eu
-        | leo quam. Pellentesque ornare sem lacinia quam venenatis
-        | vestibulum. Duis mollis, est non commodo luctus, nisi erat
-        | porttitor ligula, eget lacinia odio sem nec elit
-    .span8
-      h2 Plans and Pricing
+        | Praesent ac tellus ac magna euismod sollicitudin.
+        | Vivamus et arcu quam, et accumsan lorem. Aliquam id odio
+        | turpis. Vestibulum blandit dictum purus ut varius. Donec
+        | cursus pretium turpis, eget porta erat aliquam vitae.
       p
-        | Etiam porta sem malesuada magna mollis euismod. Integer posuere
-        | erat a ante venenatis dapibus posuere velit aliquet. Aenean eu
-        | leo quam. Pellentesque ornare sem lacinia quam venenatis
-        | vestibulum. Duis mollis, est non commodo luctus, nisi erat
-        | porttitor ligula, eget lacinia odio sem nec elit
+        | Duis vehicula libero id ante faucibus suscipit. Cras auctor,
+        | felis vel auctor faucibus, eros tellus tincidunt lorem,
+        | ac consequat nisi neque nec erat.
+      p
+        | Suspendisse tincidunt
+        | ullamcorper dui at vehicula. Cras molestie sem et justo
+        | tincidunt vehicula. Pellentesque ut dui tortor, vitae
+        | tristique justo. Donec a malesuada diam. Etiam pulvinar
+        | pellentesque iaculis.
+    .span8
+      h2 Right column
+      p
+        | Phasellus id nibh eros, sed gravida tortor. Morbi in orci
+        | quis massa malesuada aliquam eget ac lorem. Nunc est nulla,
+        | dapibus at consectetur id, faucibus at nisl. Nam tincidunt
+        | tellus ac lacus vehicula ut accumsan tellus lobortis.
+        | Vestibulum ante ipsum primis in faucibus orci luctus et
+        | ultrices posuere cubilia Curae; In quis felis ante, sed
+        | euismod mauris. 
+      p
+        | Vivamus ornare lobortis dolor, nec vehicula
+        | elit interdum vitae. Duis ut arcu ipsum. Praesent lacinia,
+        | est ac cursus bibendum, odio velit faucibus risus, ut mattis
+        | elit sapien non odio. Ut tempus, tortor ac faucibus
+        | scelerisque, enim nunc imperdiet ante, placerat elementum
+        | metus lacus eu orci. Proin rhoncus accumsan sollicitudin.
+        | Aenean a tortor nulla, vitae accumsan lorem. Integer enim
+        | ligula, vehicula sed sodales et, iaculis eget nisl.
+      p
+        | Phasellus id nibh eros, sed gravida tortor. Morbi in orci
+        | quis massa malesuada aliquam eget ac lorem. Nunc est nulla,
+        | dapibus at consectetur id, faucibus at nisl. Nam tincidunt
+        | tellus ac lacus vehicula ut accumsan tellus lobortis.
+        | Vestibulum ante ipsum primis in faucibus orci luctus et
+        | ultrices posuere cubilia Curae; In quis felis ante, sed
+        | euismod mauris. 
+      p
+        | Vivamus ornare lobortis dolor, nec vehicula
+        | elit interdum vitae. Duis ut arcu ipsum. Praesent lacinia,
+        | est ac cursus bibendum, odio velit faucibus risus, ut mattis
+        | elit sapien non odio. Ut tempus, tortor ac faucibus
+        | scelerisque, enim nunc imperdiet ante, placerat elementum
+        | metus lacus eu orci. Proin rhoncus accumsan sollicitudin.
+        | Aenean a tortor nulla, vitae accumsan lorem. Integer enim
+        | ligula, vehicula sed sodales et, iaculis eget nisl.
+
+block append scripts
+  script(src="/js/bootstrap-carousel.js")
