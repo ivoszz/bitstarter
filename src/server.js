@@ -1,31 +1,19 @@
-var pg = require('pg');
 var express = require('express');
-
-/*
-console.log(process.env.DATABASE_URL);
-
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  var query = client.query('SELECT * FROM table');
-  console.log(query);
-}); */
 
 var port = process.env.PORT || 4000;
 
-var app = express.createServer();
+var app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 
-app.configure(function() {
-  app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
-});
+app.use(app.router);
+app.use(express.static(__dirname + '/public'));
 
-var pageInfo = { pageTitle: 'Go klub Brno' };
 
 app.get('/', function(request, response) {
-  response.render('index', { pageInfo: pageInfo });
+  response.send('Hello world!');
 });
 
 app.get('/players', function(request, response) {

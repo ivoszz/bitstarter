@@ -1,9 +1,16 @@
 {
-  "name": "go-brno",
+  "name": "ivoszz",
   "version": "0.1.0",
+  "description": "Testing Node application",
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "dependencies": {
-    "pg": "latest",
     "express": "latest",
-    "jade": "latest"
+    "jade": "latest",
+    "pg": "latest"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
