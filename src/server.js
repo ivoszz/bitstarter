@@ -1,3 +1,4 @@
+var fs = require('fs');
 var express = require('express');
 
 var port = process.env.PORT || 4000;
@@ -13,11 +14,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(request, response) {
-  response.send('Hello world!');
-});
-
-app.get('/players', function(request, response) {
-  response.render('players', { pageInfo: pageInfo })
+  var text = fs.readFileSync(__dirname + '/index.html');
+  response.send(text.toString());
 });
 
 app.listen(port);

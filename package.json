@@ -1,7 +1,7 @@
 {
   "name": "ivoszz",
   "version": "0.1.0",
-  "description": "Testing Node application",
+  "description": "Bitstarter node application",
   "scripts": {
     "start": "node src/server.js"
   },
