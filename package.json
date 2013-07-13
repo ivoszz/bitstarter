@@ -8,7 +8,9 @@
   "dependencies": {
     "express": "latest",
     "jade": "latest",
-    "pg": "latest"
+    "pg": "latest",
+    "commander": "latest",
+    "cheerio": "latest"
   },
   "engines": {
     "node": "0.10.x"
