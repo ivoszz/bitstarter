@@ -24,6 +24,7 @@ References:
 var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
+var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 
@@ -44,7 +45,7 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checksfile) {
+var checkHtmlFile = function(htmlfile, checksfile, next) {
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {};
@@ -52,7 +53,20 @@ var checkHtmlFile = function(htmlfile, checksfile) {
         var present = $(checks[ii]).length > 0;
         out[checks[ii]] = present;
     }
-    return out;
+    next(out);
+};
+
+var checkUrl = function(url, checksfile, next) {
+  rest.get(url).on('complete', function(result) {
+    $ = cheerio.load(result);
+    var checks = loadChecks(checksfile).sort();
+    var out = {};
+    for(var ii in checks) {
+      var present = $(checks[ii]).length > 0;
+      out[checks[ii]] = present;
+    }
+    next(out);
+  });
 };
 
 var clone = function(fn) {
@@ -61,14 +75,22 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+var cb = function(checkJson) {
+  var outJson = JSON.stringify(checkJson, null, 4);
+  console.log(outJson);
+}
+
 if(require.main == module) {
-    program
-        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
-        .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-        .parse(process.argv);
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+  program
+    .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
+    .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+    .option('-u, --url <URL>', 'URL to index.html', String, "")
+    .parse(process.argv);
+  if (program.url.length > 0) {
+    checkUrl(program.url, program.checks, cb);
+  } else {
+    checkHtmlFile(program.file, program.checks, cb);
+  } 
 } else {
-    exports.checkHtmlFile = checkHtmlFile;
+  exports.checkHtmlFile = checkHtmlFile;
 }
